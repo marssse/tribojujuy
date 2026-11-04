@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="description" content="Explorá actividades y experiencias compartidas en diferentes zonas de Jujuy con el mapa interactivo de TRIBO.">
+  <link rel="icon" href="assets/img/logo.png" type="image/png">
+  <title>Mapa de experiencias | TRIBO</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="menu menu2 cid-tJS6tZXiPa" once="menu" id="menu-mapa">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+            <a href="page1.html" aria-label="Volver al inicio de TRIBO">
+              <img class="tribo-logo" src="assets/img/logo.png" alt="Logo de TRIBO">
+            </a>
+          </span>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <div class="hamburger"><span></span><span></span><span></span><span></span></div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown">
+            <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="page1.html#generic-text-2-vzyEjAwSUF">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="grupos.html">Grupos</a></li>
+            <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="#mapa-jujuy">Mapa</a></li>
+            <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="page1.html#contact-form-3-vzyEjAy82z">Contacto</a></li>
+          </ul>
+          <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="page1.html">Volver al inicio</a></div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <main>
+    <section class="tribo-map-section" id="mapa-jujuy" aria-labelledby="mapa-jujuy-title">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 content-head">
+            <div class="mbr-section-head mb-4">
+              <h1 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" id="mapa-jujuy-title"><strong>Explorá Jujuy en el mapa</strong></h1>
+              <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">Encontrá ideas para caminar, compartir unos mates y conocer gente en distintos rincones de la provincia. Usá la rueda para acercar o alejar y arrastrá el mapa para desplazarte.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tribo-map-filters" role="group" aria-label="Filtrar actividades por tipo">
+          <button class="tribo-map-filter" type="button" data-map-filter="all" aria-pressed="true">Todas</button>
+          <button class="tribo-map-filter" type="button" data-map-filter="trekking" aria-pressed="false">Trekking</button>
+          <button class="tribo-map-filter" type="button" data-map-filter="mate" aria-pressed="false">Mateadas</button>
+          <button class="tribo-map-filter" type="button" data-map-filter="social" aria-pressed="false">Actividades sociales</button>
+        </div>
+
+        <div class="tribo-map-layout">
+          <div id="jujuy-map" role="application" aria-label="Mapa interactivo con actividades sugeridas en Jujuy">
+            <p class="p-4">Cargando el mapa de Jujuy…</p>
+          </div>
+          <div class="tribo-map-panel" aria-label="Actividades por zona">
+            <button class="tribo-map-card" type="button" data-place-id="purmamarca-trekking" data-category="trekking">
+              <span class="tribo-map-category">Trekking · Purmamarca</span>
+              <strong>Caminata entre cerros</strong>
+              <span class="tribo-map-description">Una idea para recorrer los paisajes de la Quebrada a pie.</span>
+            </button>
+            <button class="tribo-map-card" type="button" data-place-id="termas-trekking" data-category="trekking">
+              <span class="tribo-map-category">Trekking · Termas de Reyes</span>
+              <strong>Senderos y naturaleza</strong>
+              <span class="tribo-map-description">Explorá el entorno de las yungas y la montaña en una salida al aire libre.</span>
+            </button>
+            <button class="tribo-map-card" type="button" data-place-id="tilcara-mate" data-category="mate">
+              <span class="tribo-map-category">Mateada · Tilcara</span>
+              <strong>Una ronda con vista a la Quebrada</strong>
+              <span class="tribo-map-description">Compartí unos mates y conocé a otras personas viajeras.</span>
+            </button>
+            <button class="tribo-map-card" type="button" data-place-id="san-salvador-social" data-category="social">
+              <span class="tribo-map-category">Encuentro social · San Salvador de Jujuy</span>
+              <strong>Conocé gente de la ciudad</strong>
+              <span class="tribo-map-description">Ideas para encontrarse, conversar y descubrir propuestas locales.</span>
+            </button>
+            <button class="tribo-map-card" type="button" data-place-id="humahuaca-social" data-category="social">
+              <span class="tribo-map-category">Encuentro social · Humahuaca</span>
+              <strong>Compartí una experiencia en comunidad</strong>
+              <span class="tribo-map-description">Un punto de encuentro para conectar con la cultura y las personas de la zona.</span>
+            </button>
+            <button class="tribo-map-card" type="button" data-place-id="tilcara-social" data-category="social">
+              <span class="tribo-map-category">Encuentro social · Tilcara</span>
+              <strong>Plan compartido en la Quebrada</strong>
+              <span class="tribo-map-description">Sumate a una salida grupal y descubrí el destino en compañía.</span>
+            </button>
+          </div>
+        </div>
+        <p class="tribo-map-note">Las ubicaciones y actividades son ideas orientativas para mostrar la experiencia del mapa. La oferta, disponibilidad y condiciones se confirmarán en cada actividad publicada por TRIBO y sus prestadores.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer1 programm5 cid-tJS9NNcTLZ">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <a class="display-7" href="page1.html">Volver a la presentación de TRIBO</a>
+          <p class="mbr-fonts-style copyright display-7 mt-4">© TRIBO. Cultura, experiencias y turismo en Jujuy.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/mapa.js"></script>
+</body>
+</html>
